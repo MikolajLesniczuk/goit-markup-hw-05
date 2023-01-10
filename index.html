@@ -35,15 +35,15 @@
         <nav>
           <ul class="top-nav">
             <li class="top-nav-items">
-              <span><a class="site-nav" href="./index.html">Agencja</a></span>
+              <span><a class="site-nav agency" href="./index.html">Agencja</a></span>
             </li>
             <li class="top-nav-items">
               <span
-                ><a class="site-nav" href="./portfolio.html">Portfolio</a></span
+                ><a class="site-nav " href="./portfolio.html">Portfolio</a></span
               >
             </li>
             <li class="top-nav-items">
-              <span><a class="site-nav" href="#">Kontakt</a></span>
+              <span><a class="site-nav " href="#">Kontakt</a></span>
             </li>
           </ul>
         </nav>
@@ -74,7 +74,7 @@
             EFEKTYWNE ROZWIĄZANIA<br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button class="btn-order" type="button">Zamów usługe</button>
+          <button  class="btn-order" type="button" data-modal-open>Zamów usługe</button>
         </div>
       </section>
 
@@ -141,7 +141,8 @@
                 alt="photo of laptop"
                 width="370"
                 height="294"
-              />
+              /><div class="label-background">
+                <h4 class="label">APLIKACJE KOMPUTEROWE</h4></div>
             </li>
             <li class="flex-photo-items">
               <img
@@ -149,7 +150,8 @@
                 alt="photo of laptop"
                 width="370"
                 height="294"
-              />
+              /><div class="label-background">
+              <h4 class="label">APLIKACJE MOBILNE</h4></div>
             </li>
             <li class="flex-photo-items">
               <img
@@ -157,7 +159,8 @@
                 alt="photo of laptop"
                 width="370"
                 height="294"
-              />
+              /><div class="label-background">
+                <h4 class="label">rozwiązania graficzne</h4></div>
             </li>
           </ul>
         </div>
@@ -414,5 +417,13 @@
         </div>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal" >
+        <button type="button" class="close-btn " data-modal-close>X
+
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
