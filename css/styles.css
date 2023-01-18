@@ -690,12 +690,15 @@ height: 100%;
 background-color: rgba(0, 0, 0,0.1);
 transition-property:background-color,visibility,opacity;
 transition: background-color cubic-bezier(0.4, 0, 0.2, 1), visibility linear, opacity ease ;
+opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
     
    
 }
 
 .modal{
-    position: absolute;
+    position: fixed;
 width: 528px;
 height: 581px;
 left: 536px;
@@ -706,9 +709,23 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 border-radius: 4px;
 transition-property:background-color,box-shadow;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) , box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+animation-name: effects;
+animation-duration: 1s;
 
 
+}
+ 
+@keyframes effects {
+    0%{
+        scale:0.25;
+        opacity:0.2;
 
+    }
+  
+    100%{
+        scale:1;
+        opacity:1;
+    }
 }
 .close-btn{
     position: absolute;
@@ -725,6 +742,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) , box-shadow 250
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: translateY(-100%);
 }
 
 .label{
@@ -761,7 +781,8 @@ position: absolute;
     inset:0;
     padding: 49px 45px 49px 24px;
     background-color:rgba(33, 150, 243, 0.9); 
-    transition:250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property:background-color;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
     pointer-events: none;
     color:#ffffff;
